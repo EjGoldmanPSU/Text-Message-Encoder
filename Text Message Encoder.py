@@ -1,5 +1,4 @@
-#Create program that send messages then encrypts them
-#Once user enter fingerprint or password show decrypted message
+#Change target IP to target computer IP
 import random
 import string
 alp = [" ", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
@@ -30,7 +29,7 @@ while True:
               key = random_char(10).lower()
               import os
               from socket import *
-              host = "100.64.13.248" # set to IP address of target computer
+              host = "INSERT IP HERE" # set to IP address of target computer
               port = 8080
               addr = (host, port)
               UDPSock = socket(AF_INET, SOCK_DGRAM)
@@ -43,7 +42,7 @@ while True:
                      e = encrypt(phrase.lower(), key)
                      import os
                      from socket import *
-                     host = "100.64.13.248" # set to IP address of target computer
+                     host = "INSERT IP HERE" # set to IP address of target computer
                      port = 8080
                      addr = (host, port)
                      UDPSock = socket(AF_INET, SOCK_DGRAM)
